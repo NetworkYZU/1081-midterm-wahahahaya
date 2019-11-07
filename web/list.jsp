@@ -29,7 +29,15 @@
                 例如
                 <tr><td>烤雞腿</td></tr>
                 -->
-                
+            <ol>
+                <%
+                    ArrayList foodList = (ArrayList)session.getAttribute("foodList");
+                    for (int i = 0; foodList != null && i < foodList.size(); i++) {
+                        String t = (String)foodList.get(i);
+                        out.println("<li>"+t+"</li>");
+                    }
+                %>
+            </ol> 
             </tbody>
         </table>
         <a href="checkout.jsp"><button>Checkout</button></a><br/>
@@ -37,5 +45,7 @@
         question 2 (10%)
         引用 /WEB-INF/footer.jsp
         -->
+        <%@include file="/WEB-INF/footer.jsp"%>
+        
     </body>
 </html>

@@ -4,6 +4,7 @@
     Author     : lendle
 --%>
 
+<%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -17,7 +18,7 @@
         question 3 (10%)
         將表單的目標設定爲 addOrder，使用 post
         -->
-        <form>
+        <form action="addOrder" method="POST">
             <select name="food">
                 <option value="氧氣草">氧氣草</option>
                 <option value="惡魔果實">惡魔果實</option>
@@ -27,6 +28,5 @@
             </select>
             <input type="submit"/>
         </form>
-       
     </body>
 </html>
